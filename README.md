@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# 📈 IDX Trading Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Indonesian Stock Market Trading Assistant with AI Advisory - Built with React + TypeScript
 
-Currently, two official plugins are available:
+![Preview](https://via.placeholder.com/800x400/1c2128/58a6ff?text=IDX+Trading+Assistant)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## �Features
 
-## React Compiler
+| Feature | Description |
+|---------|-------------|
+| 📊 **Dashboard** | Market overview with key indices (IHSG, LQ45, etc.) |
+| 🔍 **Stock Monitor** | Real-time stock watchlist for IDX stocks |
+| 📈 **Technical Analysis** | RSI, SMA, MACD, Bollinger Bands indicators |
+| 🤖 **AI Advisory** | Chat with AI-powered trading assistant |
+| 💼 **Portfolio** | Track holdings, performance & sector allocation |
+| 📰 **News** | Indonesian market news feed |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React 18 + TypeScript + Vite
+- **Charts:** Recharts
+- **Icons:** Lucide React
+- **Styling:** CSS Variables (Dark Mode)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone https://github.com/phill-ed/idx-trading-assistant.git
+cd idx-trading-assistant
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Install dependencies
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Dashboard.tsx      # Market overview
+│   ├── StockMonitor.tsx   # Stock watchlist
+│   ├── TechnicalAnalysis.tsx  # Technical indicators
+│   ├── Advisory.tsx       # AI chat assistant
+│   ├── Portfolio.tsx      # Portfolio tracker
+│   └── News.tsx          # News feed
+├── App.tsx               # Main app component
+├── App.css               # Global styles
+└── main.tsx              # Entry point
+```
+
+## 🎯 Upcoming Features
+
+- [ ] Real-time IDX data API integration
+- [ ] Stock screener
+- [ ] Price alerts
+- [ ] Paper trading simulation
+- [ ] Mobile responsive design
+
+## 📄 License
+
+MIT License
+
+---
+
+Built with ❤️ for Indonesian traders
