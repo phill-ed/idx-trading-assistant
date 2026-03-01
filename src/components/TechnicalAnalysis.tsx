@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts'
-import { TrendingDown, Activity, Target, BarChart2 } from 'lucide-react'
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts'
+import { Activity, Target, BarChart2 } from 'lucide-react'
 
 const stockData = [
   { date: 'Jan', price: 8200 },
@@ -24,14 +24,6 @@ const indicators = {
   MACD: { value: 125, signal: 'Bullish Crossover', recommendation: 'Buy signal' },
   Bollinger: { price: 8925, upper: 9100, lower: 8200, signal: 'Near upper band', recommendation: 'Could be overbought' },
 }
-
-const candlestickData = [
-  { date: '1', open: 8800, high: 8950, low: 8750, close: 8900 },
-  { date: '2', open: 8900, high: 9020, low: 8850, close: 8950 },
-  { date: '3', open: 8950, high: 9000, low: 8800, close: 8850 },
-  { date: '4', open: 8850, high: 8920, low: 8780, close: 8880 },
-  { date: '5', open: 8880, high: 8980, low: 8850, close: 8925 },
-]
 
 function TechnicalAnalysis() {
   const [selectedStock, setSelectedStock] = useState('BBCA')

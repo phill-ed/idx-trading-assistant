@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts'
-import { Wallet, TrendingUp, TrendingDown, Plus, RefreshCw, Download, Target, Calendar } from 'lucide-react'
+import { PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
+import { Wallet, TrendingUp, Plus, RefreshCw, Download, Target, Calendar } from 'lucide-react'
 
 interface PortfolioItem {
   code: string
@@ -127,7 +127,6 @@ function Portfolio() {
                 <YAxis stroke="#8b949e" tickFormatter={(v) => `${(v/1000000).toFixed(1)}M`} />
                 <Tooltip 
                   contentStyle={{ background: '#1c2128', border: '1px solid #30363d', borderRadius: 8 }}
-                  formatter={(value: number) => [`Rp ${value.toLocaleString('id-ID')}`, 'Value']}
                 />
                 <Line type="monotone" dataKey="value" stroke="#58a6ff" strokeWidth={2} dot={false} />
               </LineChart>
@@ -230,7 +229,7 @@ function Portfolio() {
           <div className="card-header">
             <h3 className="card-title">🏆 Top Gainers</h3>
           </div>
-          {topGainers.map((item, idx) => {
+          {topGainers.map((item) => {
             const gain = ((item.currentPrice - item.avgPrice) / item.avgPrice) * 100
             return (
               <div key={item.code} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid var(--border-color)' }}>
@@ -247,7 +246,7 @@ function Portfolio() {
           <div className="card-header">
             <h3 className="card-title">📉 Top Losers</h3>
           </div>
-          {topLosers.map((item, idx) => {
+          {topLosers.map((item) => {
             const gain = ((item.currentPrice - item.avgPrice) / item.avgPrice) * 100
             return (
               <div key={item.code} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid var(--border-color)' }}>

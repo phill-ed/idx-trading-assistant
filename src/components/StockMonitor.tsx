@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, Star, TrendingUp, TrendingDown, RefreshCw } from 'lucide-react'
+import { TrendingUp, TrendingDown, RefreshCw } from 'lucide-react'
 
 interface Stock {
   code: string

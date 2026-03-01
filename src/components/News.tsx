@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Newspaper, TrendingUp, Calendar, ExternalLink, Filter, Search, Bell } from 'lucide-react'
+import { Calendar, Search, Bell } from 'lucide-react'
 
 interface NewsItem {
   id: number

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Brain, MessageSquare, Send, Sparkles, TrendingUp, Shield, Clock, ThumbsUp, ThumbsDown } from 'lucide-react'
+import { Brain, Send, Sparkles, TrendingUp, Shield } from 'lucide-react'
 
 interface AdvisorMessage {
   id: number
